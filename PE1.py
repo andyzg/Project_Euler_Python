@@ -1,6 +1,1 @@
-sum = 0
-
-for i in range (0,1000):
-	if i%3==0 or i%5==0:
-		sum+=i
-print(sum)
+print(sum([x if x%3==0 or x%5==0 else 0 for x in xrange(0, 1000)]))
