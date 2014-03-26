@@ -1,13 +1,1 @@
-number = 600851475143
-check = True
-
-
-while check:
-	for i in range(2,int(number**0.5)+1):
-		if number%i==0:
-			number=number/i
-			print(number)
-			break
-		if i==int(number**0.5):
-			check=False
-print(number)
+print(filter(lambda x:not sum([x%i==0 for i in range(2,x)]),filter(lambda x:x!=0,[x if 600851475143%x == 0 else 0 for x in range(2, int(600851475143**0.5))]))[-1])

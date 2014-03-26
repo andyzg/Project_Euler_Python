@@ -1,13 +1,2 @@
-a = 1
-b = 2
-c=0
-count = 2
-sum = 2
-while b < 4000000:
-	c = a + b
-	a=b
-	b=c
-	
-	if c%2==0:
-		sum+=c
-print(sum)
+fib = lambda x:1 if x<2 else fib(x-1) + fib(x-2)
+print(sum(filter(lambda x:x if x<4000000 else 0, map(fib, [x for x in range(2, 33, 3)]))))
